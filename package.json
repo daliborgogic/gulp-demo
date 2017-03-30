@@ -16,5 +16,14 @@
     "gulp-babel": "6.1.2",
     "gulp-sass": "3.1.0",
     "gulp-sourcemaps": "2.5.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "ava": {
+    "babel": "inherit"
   }
 }
