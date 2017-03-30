@@ -4,4 +4,3 @@ node_js:
   - "7"
 before_install:
   - 'npm install --global ava'
-script: test
