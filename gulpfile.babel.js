@@ -14,7 +14,7 @@ const paths = {
     dest: 'build/css/'
   },
   html: {
-    src: 'src/views/**/*.html',
+    src: 'src/**/*.html',
     dest: 'build/'
   }
 }
@@ -47,7 +47,7 @@ export function css () {
 }
 
 export function html () {
-  return gulp.src('src/views/**/*.html')
+  return gulp.src('src/**/*.html')
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.reload({stream: true}))
 }
