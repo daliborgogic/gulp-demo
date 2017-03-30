@@ -1,21 +1,20 @@
 'use strict'
 
 import gulp from 'gulp'
-import stylus from 'gulp-stylus'
+import sass from 'gulp-sass'
 import babel from 'gulp-babel'
-import pug from 'gulp-pug'
 import browserSync from 'browser-sync'
 import del from 'del'
-import prefix from 'autoprefixer-stylus'
+import prefix from 'gulp-autoprefixer'
 import sourceMaps from 'gulp-sourcemaps'
 
 const paths = {
   css: {
-    src: 'src/css/**/*.styl',
+    src: 'src/css/**/*.scss',
     dest: 'build/css/'
   },
   html: {
-    src: 'src/views/**/*.pug',
+    src: 'src/views/**/*.html',
     dest: 'build/'
   }
 }
@@ -39,7 +38,7 @@ export function ws (cb) {
 export function css () {
   return gulp.src(paths.css.src)
     .pipe(sourceMaps.init())
-    .pipe(stylus({
+    .pipe(sass({
       use: prefix({ browsers: ['last 3 versions'] })
     }))
     .pipe(sourceMaps.write('.'))
@@ -48,8 +47,7 @@ export function css () {
 }
 
 export function html () {
-  return gulp.src('src/views/**/*.pug')
-    .pipe(pug())
+  return gulp.src('src/views/**/*.html')
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.reload({stream: true}))
 }
