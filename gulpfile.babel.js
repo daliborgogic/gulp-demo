@@ -1,11 +1,11 @@
 'use strict'
 
 import gulp from 'gulp'
-import stylus from 'gulp-sass'
+import sass from 'gulp-sass'
 import babel from 'gulp-babel'
 import browserSync from 'browser-sync'
 import del from 'del'
-import prefix from 'autoprefixer-sass'
+import prefix from 'gulp-autoprefixer'
 import sourceMaps from 'gulp-sourcemaps'
 
 const paths = {
