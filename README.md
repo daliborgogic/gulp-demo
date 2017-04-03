@@ -2,7 +2,7 @@
 
 > For demo purposes only
 
-## Build Setup
+## Setup
 
 **Requires Node.js 7+**
 
