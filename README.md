@@ -11,7 +11,7 @@
 $ npm i gulpjs/gulp-cli -g
 
 # Install dependencies
-npm i
+$ npm i
 
 # Serve 
 $ gulp
