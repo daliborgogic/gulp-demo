@@ -39,14 +39,12 @@ export function css () {
   return gulp.src(paths.css.src)
     .pipe(sourceMaps.init())
     .pipe(sass({
-                // See: https://github.com/sass/node-sass/issues/957
-                //outputStyle: "compressed"
-                outputStyle: "expanded"
-            }).on("error", sass.logError))
+      outputStyle: "expanded" // compressed
+    }).on("error", sass.logError))
     .pipe(prefix({
-                // Default for Browserslist (https://github.com/ai/browserslist) @ 2015/09/18
-                browsers: ["> 1%", "last 2 versions", "Firefox ESR"]
-            }))
+      // Default for Browserslist (https://github.com/ai/browserslist)
+      browsers: ['last 2 versions']
+    }))
     .pipe(sourceMaps.write('.', {debug: true}))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browserSync.reload({stream: true}))
