@@ -30,7 +30,7 @@ export function ws (cb) {
     },
     port: 3000,
     notify: false,
-    open: false
+    open: true
   }, cb)
 }
 
