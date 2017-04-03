@@ -39,7 +39,11 @@ export function css () {
   return gulp.src(paths.css.src)
     .pipe(sourceMaps.init())
     .pipe(sass({
-      use: prefix({ browsers: ['last 3 versions'] })
+        outputStyle: 'compressed'
+      },{
+        use: prefix({
+        browsers: ['last 3 versions']
+      })
     }))
     .pipe(sourceMaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))

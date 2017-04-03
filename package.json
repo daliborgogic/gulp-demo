@@ -11,8 +11,7 @@
     "gulp-autoprefixer": "3.1.1",
     "gulp-babel": "6.1.2",
     "gulp-sass": "3.1.0",
-    "gulp-sourcemaps": "2.5.0",
-    "normalize-scss": "6.0.0"
+    "gulp-sourcemaps": "2.5.0"
   },
   "babel": {
     "presets": [
