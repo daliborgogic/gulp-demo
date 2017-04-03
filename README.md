@@ -3,9 +3,6 @@
 > For demo purposes only
 
 ```bash
-# Uninstall previous Gulp installation
-$ npm rm gulp -g && npm rm gulp-cli -g && npm cache clean
-
 # Install the latest Gulp CLI tools globally
 $ npm i gulpjs/gulp-cli -g
 
