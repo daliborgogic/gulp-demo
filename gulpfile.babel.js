@@ -34,18 +34,17 @@ export function ws (cb) {
   }, cb)
 }
 
-// You can still declare named functions and export them as tasks
 export function css () {
   return gulp.src(paths.css.src)
     .pipe(sourceMaps.init())
     .pipe(sass({
-      outputStyle: "expanded" // compressed
-    }).on("error", sass.logError))
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(prefix({
       // Default for Browserslist (https://github.com/ai/browserslist)
       browsers: ['last 2 versions']
     }))
-    .pipe(sourceMaps.write('.', {debug: true}))
+    .pipe(sourceMaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
     .pipe(browserSync.reload({stream: true}))
 }
