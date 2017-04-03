@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/daliborgogic/gulp-demo.svg?branch=master)](https://travis-ci.org/daliborgogic/gulp-demo)
+# Gulp demo
 
 > For demo purposes only
 
